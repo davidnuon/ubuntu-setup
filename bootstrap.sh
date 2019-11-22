@@ -21,6 +21,7 @@ apt-get install -y vim python3-pip gnome-tweaks
 echo "Setting up git..."
 su $CURRENT_USER -c "git config --global user.name $GIT_USERNAME"
 su $CURRENT_USER -c "git config --global user.email $GIT_EMAIL"
+su $CURRENT_USER -c "git config --global core.editor vim"
 
 echo "Installing ansible..."
 pip3 install ansible
