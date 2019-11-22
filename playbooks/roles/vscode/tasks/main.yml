@@ -1,0 +1,6 @@
+---
+
+- name: Install VS Code
+  snap:
+    name: code
+    classic: yes
