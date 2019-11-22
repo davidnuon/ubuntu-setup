@@ -12,6 +12,9 @@ CURRENT_USER=$1
 touch .env
 source .env
 
+GIT_USERNAME=${GIT_USERNAME:-user}
+GIT_EMAIL=${GIT_EMAIL:-user@example.org}
+
 echo "Grab updates..."
 apt-get update
 
