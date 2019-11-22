@@ -14,7 +14,7 @@ echo "Grab updates..."
 apt-get update
 
 echo "Installing tools..."
-apt-get install -y git vim python3-pip
+apt-get install -y git vim python3-pip gnome-tweaks
 
 echo "Setting up git..."
 su $CURRENT_USER -c "git config --global user.name $GIT_USERNAME"
