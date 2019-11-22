@@ -1,4 +1,7 @@
-bootsrap:
+build: bootstrap desktop
+
+bootstrap:
 	./bootstrap.sh
 
-build: bootsrap
+desktop:
+	ansible-playbook -i inventory playbooks/desktop.yml
