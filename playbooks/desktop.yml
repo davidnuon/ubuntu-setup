@@ -1,0 +1,8 @@
+---
+
+- name: Ubuntu desktop environment playbook
+  hosts: localhost
+  tasks:
+    - name: hello
+      debug:
+        msg: "this is a test"
