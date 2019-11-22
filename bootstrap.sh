@@ -1,5 +1,7 @@
 #!/bin/bash
 
+# Assume sudo but keep track of 
+# current user
 if [[ $EUID != 0 ]]; then
 	sudo "$0" `whoami`
 	exit $?
@@ -20,3 +22,5 @@ echo "Setting up git..."
 su $CURRENT_USER -c "git config --global user.name $GIT_USERNAME"
 su $CURRENT_USER -c "git config --global user.email $GIT_EMAIL"
 
+echo "Installing ansible..."
+pip3 install ansible
