@@ -4,3 +4,5 @@
   hosts: localhost
   roles:
     - { role: vscode,  become: true }
+    - { role: vim,  become: true }
+    - { role: gnome-tweaks,  become: true }

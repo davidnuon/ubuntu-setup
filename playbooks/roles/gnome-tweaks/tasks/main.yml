@@ -1,0 +1,6 @@
+---
+
+- name: Install gnome-tweaks
+  apt:
+    name: gnome-tweaks
+    state: present
