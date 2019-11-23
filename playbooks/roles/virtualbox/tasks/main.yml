@@ -1,0 +1,6 @@
+---
+
+- name: Install Virtualbox
+  apt:
+    name: virtualbox
+    state: present

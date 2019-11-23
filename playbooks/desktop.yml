@@ -6,3 +6,5 @@
     - { role: vscode,  become: true }
     - { role: vim,  become: true }
     - { role: gnome-tweaks,  become: true }
+    - { role: virtualbox,  become: true }
+    - { role: vagrant,  become: true }
