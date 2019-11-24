@@ -8,3 +8,4 @@
     - { role: gnome-tweaks,  become: true }
     - { role: virtualbox,  become: true }
     - { role: vagrant,  become: true }
+    - { role: slack,  become: true }
