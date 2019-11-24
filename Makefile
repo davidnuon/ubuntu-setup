@@ -1,8 +1,8 @@
-build: bootstrap desktop
+build: bootstrap core
 
 bootstrap:
 	./bootstrap.sh
 
-desktop:
+core:
 	ansible-playbook --ask-become-pass \
-		-i inventory playbooks/desktop.yml
+		-i inventory playbooks/core.yml
