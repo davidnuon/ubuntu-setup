@@ -4,3 +4,15 @@
   apt:
     name: gnome-tweaks
     state: present
+
+- name: Remove Amazon App 
+  apt: 
+    name: ubuntu-web-launchers
+    state: absent
+
+- name: Remove Amazon App Launcher Icon
+  command: | 
+       dpkg-divert --divert /usr/share/applications/ubuntu-amazon-default.desktop.diverted \
+           --local \
+           --rename \
+           /usr/share/applications/ubuntu-amazon-default.desktop
