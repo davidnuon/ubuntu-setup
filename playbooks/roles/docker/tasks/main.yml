@@ -28,6 +28,10 @@
     name: 'docker-ce'
     state: 'present'
 
+- name: 'install docker-compose'
+  apt:
+    name: 'docker-compose'
+    state: 'present'
 
 - name: 'enable docker systemd service'
   service:
