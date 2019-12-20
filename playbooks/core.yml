@@ -10,3 +10,4 @@
     - { role: vagrant,  become: true }
     - { role: slack,  become: true }
     - { role: docker,  become: true }
+    - { role: python,  become: true }
