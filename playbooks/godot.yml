@@ -1,0 +1,6 @@
+---
+
+- name: Godot playbook
+  hosts: localhost
+  roles:
+    - { role: godot,  become: true }

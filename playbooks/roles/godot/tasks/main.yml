@@ -1,0 +1,60 @@
+---
+
+- name: Make temporary directory
+  file: 
+    path: /tmp/godot
+    state: directory
+
+- name: Download Godot Release
+  get_url:
+    url: "{{ download_url }}"
+    dest: /tmp/godot
+  register: bin_files
+
+- name: Unziping the archive
+  unarchive:
+    src: "{{ item }}"
+    dest: /tmp/godot
+    copy: no
+  with_items:
+  - "{{ bin_files.dest }}"
+
+- name: Making folder in /opt
+  file:
+    path: /opt/godot/bin
+    state: directory
+
+- name: Move the Godot binary over
+  copy:
+    src: "/tmp/godot/{{ filename }}"
+    dest: /opt/godot/bin/godot
+    owner: root
+    group: root
+    mode: '0755'
+
+- name: Making ~/.icons directory
+  file:
+    path: "/home/{{lookup('env','CURRENT_USER')}}/.icons"
+    state: directory
+
+
+- name: Copy the Godot icon
+  copy: 
+    src: "{{ role_path }}/files/godot.png"
+    dest: "/home/{{lookup('env','CURRENT_USER')}}/.icons/godot.png"
+    owner: root
+    group: root
+    mode: '0644'
+    
+- name: Create desktop entry
+  copy:
+    src: "{{ role_path }}/files/godot.desktop"
+    dest: "/home/{{lookup('env','CURRENT_USER')}}/.local/share/applications"
+    owner: root
+    group: root
+    mode: '0755'
+
+- name: Removing temp file
+  file:
+    path: "/tmp/godot"
+    state: absent
