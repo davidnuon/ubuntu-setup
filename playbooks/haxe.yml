@@ -4,3 +4,4 @@
   hosts: localhost
   roles:
     - { role: haxe,  become: true }
+    - { role: haxe_flixel,  become: true }

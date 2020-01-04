@@ -1,0 +1,1 @@
+current_user: "{{ lookup('env', 'CURRENT_USER')}}"

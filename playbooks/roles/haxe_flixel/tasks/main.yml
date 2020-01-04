@@ -1,0 +1,24 @@
+---
+- name: "Install lime"
+  command: "haxelib install lime"
+  become: "{{ current_user }}"
+
+- name: "Install openfl"
+  command: "haxelib install openfl"
+  become: "{{ current_user }}"
+
+- name: "Install flixel"
+  command: "haxelib install flixel"
+  become: "{{ current_user }}"
+
+- name: "Setup lime for flixel"
+  command: "haxelib run lime setup flixel"
+  become: "{{ current_user }}"
+
+- name: "Setup lime command"
+  command: "haxelib run lime setup"
+  become: "{{ current_user }}"
+
+- name: "Install flixel-tools"
+  command: "haxelib install flixel-tools"
+  become: "{{ current_user }}"
