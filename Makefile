@@ -8,3 +8,6 @@ core:
 godot:
 	CURRENT_USER=`whoami` ansible-playbook --ask-become-pass \
 		-i inventory playbooks/godot.yml
+haxe:
+	CURRENT_USER=`whoami` ansible-playbook --ask-become-pass \
+		-i inventory playbooks/haxe.yml		

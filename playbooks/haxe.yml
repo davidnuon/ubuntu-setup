@@ -1,0 +1,6 @@
+---
+
+- name: Haxe playbook
+  hosts: localhost
+  roles:
+    - { role: haxe,  become: true }

@@ -1,0 +1,21 @@
+---
+
+- name: "add Haxe repository"
+  apt_repository:
+    repo: "ppa:haxe/releases"
+    state: "present"
+    update_cache: "yes"
+
+- name: "Install Haxe"
+  apt:
+    name: "haxe"
+    state: "present"
+
+- name: "Make ~/haxelib folder"
+  file:
+    dest: "/home/{{ lookup('env', 'CURRENT_USER')}}/haxelib"
+    state: directory
+
+- name: "Make ~/haxelib the haxe repo directory"
+  command: "haxelib setup /home/{{ lookup('env', 'CURRENT_USER')}}/haxelib"
+
