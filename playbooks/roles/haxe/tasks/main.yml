@@ -15,7 +15,8 @@
   file:
     dest: "/home/{{ lookup('env', 'CURRENT_USER')}}/haxelib"
     state: directory
+  become: "{{ lookup('env', 'CURRENT_USER')}}"
 
 - name: "Make ~/haxelib the haxe repo directory"
   command: "haxelib setup /home/{{ lookup('env', 'CURRENT_USER')}}/haxelib"
-
+  become: "{{ lookup('env', 'CURRENT_USER')}}"
