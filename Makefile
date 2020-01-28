@@ -10,4 +10,8 @@ godot:
 		-i inventory playbooks/godot.yml
 haxe:
 	CURRENT_USER=`whoami` ansible-playbook --ask-become-pass \
-		-i inventory playbooks/haxe.yml		
+		-i inventory playbooks/haxe.yml
+
+nodejs:
+	CURRENT_USER=`whoami` ansible-playbook --ask-become-pass \
+		-i inventory playbooks/nodejs.yml
