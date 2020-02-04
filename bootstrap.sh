@@ -12,6 +12,9 @@ CURRENT_USER=$1
 echo "Grab updates..."
 apt-get update
 
+echo "Installing snapd"
+apt-get install snapd
+
 echo "Installing tools..."
 apt-get install -y python3-pip
 
