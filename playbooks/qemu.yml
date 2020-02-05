@@ -1,0 +1,6 @@
+---
+
+- name: QEMU
+  hosts: localhost
+  roles:
+    - { role: qemu,  become: true }

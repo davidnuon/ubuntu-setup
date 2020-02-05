@@ -1,0 +1,11 @@
+---
+
+- name: Install qemu
+  apt:
+    name: qemu
+    state: present
+
+- name: Install qemu-x86
+  apt:
+    name: qemu-system-x86
+    state: present

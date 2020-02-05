@@ -1,0 +1,6 @@
+---
+
+- name: NodeJS playbook
+  hosts: localhost
+  roles:
+    - { role: nodejs,  become: true, nodejs_version: "12.x" }
