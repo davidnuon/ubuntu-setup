@@ -3,4 +3,4 @@
 - name: Godot playbook
   hosts: localhost
   roles:
-    - { role: godot,  become: true }
+    - { role: godot,  become: true, version: "3.2" }
