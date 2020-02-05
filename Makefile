@@ -15,3 +15,7 @@ haxe:
 nodejs:
 	CURRENT_USER=`whoami` ansible-playbook --ask-become-pass \
 		-i inventory playbooks/nodejs.yml
+
+qemu:
+	CURRENT_USER=`whoami` ansible-playbook --ask-become-pass \
+		-i inventory playbooks/qemu.yml
