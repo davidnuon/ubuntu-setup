@@ -1,0 +1,6 @@
+---
+
+- name: Install mozc (Japanese IME)
+  apt:
+    name: ibus-mozc
+    state: present

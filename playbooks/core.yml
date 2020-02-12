@@ -12,3 +12,4 @@
     - { role: docker,  become: true }
     - { role: python,  become: true }
     - { role: tmux,  become: true }
+    - { role: multi_lingual,  become: true }
