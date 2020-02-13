@@ -13,3 +13,4 @@
     - { role: python,  become: true }
     - { role: tmux,  become: true }
     - { role: multi_lingual,  become: true }
+    - { role: net-tools,  become: true }
