@@ -1,0 +1,6 @@
+---
+
+- name: Wine
+  hosts: localhost
+  roles:
+    - { role: wine,  become: true }

@@ -1,0 +1,9 @@
+---
+
+- name: Add 32bit 
+  command: dpkg --add-architecture i386 
+
+- name: Install wine
+  apt:
+    name: wine
+    state: present

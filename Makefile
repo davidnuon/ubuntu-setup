@@ -19,3 +19,7 @@ nodejs:
 qemu:
 	CURRENT_USER=`whoami` ansible-playbook --ask-become-pass \
 		-i inventory playbooks/qemu.yml
+	
+wine:
+	CURRENT_USER=`whoami` ansible-playbook --ask-become-pass \
+		-i inventory playbooks/wine.yml
