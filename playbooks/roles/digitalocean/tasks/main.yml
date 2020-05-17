@@ -1,0 +1,12 @@
+---
+
+- name: Install doctl
+  snap:
+    name: doctl
+    state: present
+
+- name: Install kubectl
+  snap:
+    name: kubectl
+    classic: yes
+    state: present
