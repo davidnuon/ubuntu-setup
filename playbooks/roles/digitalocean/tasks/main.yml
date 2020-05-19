@@ -3,6 +3,7 @@
 - name: Install doctl
   snap:
     name: doctl
+    classic: yes
     state: present
 
 - name: Install kubectl
