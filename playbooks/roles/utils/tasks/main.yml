@@ -1,0 +1,11 @@
+---
+
+- name: Install htop
+  apt:
+    name: htop
+    state: present
+
+- name: Install curl
+  apt:
+    name: curl
+    state: present

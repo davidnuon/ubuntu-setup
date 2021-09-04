@@ -23,3 +23,7 @@ qemu:
 wine:
 	CURRENT_USER=`whoami` ansible-playbook --ask-become-pass \
 		-i inventory playbooks/wine.yml
+
+utils:
+	CURRENT_USER=`whoami` ansible-playbook --ask-become-pass \
+		-i inventory playbooks/utils.yml

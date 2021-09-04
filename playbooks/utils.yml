@@ -1,0 +1,6 @@
+---
+
+- name: Utils
+  hosts: localhost
+  roles:
+    - { role: utils,  become: true }
