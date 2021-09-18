@@ -1,0 +1,6 @@
+---
+
+- name: Dokcer BuildX
+  hosts: localhost
+  roles:
+    - { role: docker-buildx,  become: true }

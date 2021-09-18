@@ -27,3 +27,7 @@ wine:
 utils:
 	CURRENT_USER=`whoami` ansible-playbook --ask-become-pass \
 		-i inventory playbooks/utils.yml
+
+docker-buildx:
+	CURRENT_USER=`whoami` ansible-playbook --ask-become-pass \
+		-i inventory playbooks/docker-buildx.yml

@@ -1,0 +1,8 @@
+---
+
+- name: Install qemu and support for docker buildx
+  apt:
+    name: 
+      - qemu-user-static
+      - binfmt-support
+    state: present
