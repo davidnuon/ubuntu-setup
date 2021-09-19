@@ -13,7 +13,7 @@ echo "Grab updates..."
 apt-get update
 
 echo "Installing snapd"
-apt-get install snapd
+apt-get install -y snapd 
 
 echo "Installing tools..."
 apt-get install -y python3-pip
