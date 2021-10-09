@@ -27,3 +27,6 @@ wine:
 utils:
 	CURRENT_USER=`whoami` ansible-playbook --ask-become-pass \
 		-i inventory playbooks/utils.yml
+snap:
+	CURRENT_USER=`whoami` ansible-playbook --ask-become-pass \
+		-i inventory playbooks/snap.yml

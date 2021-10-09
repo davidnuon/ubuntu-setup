@@ -1,0 +1,9 @@
+---
+
+- name: Install various snap packages
+  hosts: localhost
+  roles:
+    - { role: snapd,  become: true }
+    - { role: digitalocean,  become: true }
+    - { role: slack,  become: true }
+    - { role: vscode,  become: true }

@@ -12,6 +12,3 @@
     - { role: tmux,  become: true }
     - { role: multi_lingual,  become: true }
     - { role: net-tools,  become: true }
-    #- { role: digitalocean,  become: true }
-    #- { role: slack,  become: true }
-    #- { role: vscode,  become: true }
